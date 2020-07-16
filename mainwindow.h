@@ -4,18 +4,31 @@
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow
-{
+class MainWindow: public QMainWindow {
     Q_OBJECT
 
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void left_click();
+    void click_event();
+
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
+    float    x_scale;
+    float    y_scale;
+    int      target_x;
+    int      target_y;
+    uint64_t target_time;
 };
-#endif // MAINWINDOW_H
+#endif    // MAINWINDOW_H
