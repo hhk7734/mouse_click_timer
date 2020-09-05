@@ -80,10 +80,12 @@ void MainWindow::on_pushButton_clicked() {
     int minute   = ui->minute->value();
     int second   = ui->second->value();
     int m_second = ui->m_second->value();
-    int u_second = ui->m_second->value();
+    int u_second = ui->u_second->value();
+    int n_second = ui->n_second->value();
 
     target      = ((hour * 60) + minute) * 60 + second;
-    target_time = start + target * 10000000 + m_second * 1000 + u_second * 10;
+    target_time = start + target * 10000000 + m_second * 1000 + u_second * 10
+                  + n_second / 100;
 
 
     GetSystemTimePreciseAsFileTime(&ft);
