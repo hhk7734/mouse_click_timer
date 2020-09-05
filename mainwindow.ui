@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>379</width>
+    <width>500</width>
     <height>158</height>
    </rect>
   </property>
@@ -99,6 +99,23 @@
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QSpinBox" name="n_second">
+           <property name="maximum">
+            <number>900</number>
+           </property>
+           <property name="singleStep">
+            <number>100</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>ns</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
        <item>
@@ -156,7 +173,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>379</width>
+     <width>500</width>
      <height>21</height>
     </rect>
    </property>
